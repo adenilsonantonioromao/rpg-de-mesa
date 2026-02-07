@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPG de Mesa - Visual Novel Point & Click</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <header class="sidebar__header">
+          <h1>RPG de Mesa</h1>
+          <p>Visual Novel + Point & Click</p>
+        </header>
+
+        <section class="panel">
+          <h2>Personagem</h2>
+          <div class="stats" id="stats"></div>
+        </section>
+
+        <section class="panel">
+          <h2>Vantagens (3D&T Victory)</h2>
+          <ul class="advantages" id="advantages"></ul>
+        </section>
+
+        <section class="panel">
+          <h2>Afinidade com NPCs</h2>
+          <div class="affinity" id="affinity"></div>
+        </section>
+
+        <section class="panel">
+          <h2>Mapa</h2>
+          <div class="map" id="map"></div>
+          <div class="map__legend">
+            <span class="legend legend--player">Jogador</span>
+            <span class="legend legend--poi">POI</span>
+          </div>
+        </section>
+      </aside>
+
+      <main class="main">
+        <section class="scene">
+          <div class="scene__art">
+            <div class="scene__title">
+              <h2>Taberna do Crepúsculo</h2>
+              <p>Uma noite chuvosa, rumores e mapas antigos.</p>
+            </div>
+            <div class="scene__details">
+              <span class="badge">Narrador ativo</span>
+              <span class="badge badge--outline">Turno 1</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="chat" id="chat"></section>
+
+        <section class="actions">
+          <h3>Ações rápidas</h3>
+          <div class="actions__buttons" id="actions"></div>
+        </section>
+
+        <section class="input">
+          <label for="playerInput">Comando livre</label>
+          <div class="input__row">
+            <input
+              id="playerInput"
+              type="text"
+              placeholder="Descreva sua ação..."
+            />
+            <button id="sendAction">Enviar</button>
+          </div>
+          <p class="input__hint">
+            Dica: combine descrição narrativa e intenção tática. Ex: “Examino o
+            mapa e peço informações ao bardo”.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
